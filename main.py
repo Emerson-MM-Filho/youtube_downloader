@@ -10,7 +10,7 @@ def download(output_path: str, url: str, file_extension: str) -> YouTube:
     return youtube
 
 if __name__ == "__main__":
-    url = input("Insert the url: ")
-    output_path = input(f"Insert the download path (or \"enter\" for default - \"{DEFAULT_DOWNLOAD_PATH_WINDOWS}\"): ")
-    file_extension = input("Insert the file extension (\"mp3\" or \"mp4\"): ")
+    url = input("Enter the youtube video url: ")
+    file_extension = input("Choose the format you want to download (\"mp3\" or \"mp4\"): ")
+    output_path = input(f"Enter the output path, or leave blank (\"enter\") for the default path (\"{DEFAULT_DOWNLOAD_PATH_WINDOWS}\"): ")
     download(output_path or DEFAULT_DOWNLOAD_PATH_WINDOWS, url, file_extension)
